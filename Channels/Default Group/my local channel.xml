@@ -3,12 +3,39 @@
   <nextMetaDataId>2</nextMetaDataId>
   <name>my local channel</name>
   <description/>
-  <revision>1</revision>
+  <revision>2</revision>
   <sourceConnector version="4.3.0">
     <metaDataId>0</metaDataId>
     <name>sourceConnector</name>
-    <properties class="com.mirth.connect.connectors.vm.VmReceiverProperties" version="4.3.0">
+    <properties class="com.mirth.connect.connectors.js.JavaScriptReceiverProperties" version="4.3.0">
       <pluginProperties/>
+      <pollConnectorProperties version="4.3.0">
+        <pollingType>INTERVAL</pollingType>
+        <pollOnStart>false</pollOnStart>
+        <pollingFrequency>5000</pollingFrequency>
+        <pollingHour>0</pollingHour>
+        <pollingMinute>0</pollingMinute>
+        <cronJobs/>
+        <pollConnectorPropertiesAdvanced>
+          <weekly>true</weekly>
+          <inactiveDays>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+            <boolean>false</boolean>
+          </inactiveDays>
+          <dayOfMonth>1</dayOfMonth>
+          <allDay>true</allDay>
+          <startingHour>8</startingHour>
+          <startingMinute>0</startingMinute>
+          <endingHour>17</endingHour>
+          <endingMinute>0</endingMinute>
+        </pollConnectorPropertiesAdvanced>
+      </pollConnectorProperties>
       <sourceConnectorProperties version="4.3.0">
         <responseVariable>None</responseVariable>
         <respondAfterProcessing>true</respondAfterProcessing>
@@ -23,6 +50,7 @@
         </resourceIds>
         <queueBufferSize>1000</queueBufferSize>
       </sourceConnectorProperties>
+      <script msync-fileref="sourceConnector-sourceConnector.js"/>
     </properties>
     <transformer version="4.3.0">
       <elements/>
@@ -110,7 +138,7 @@
     <filter version="4.3.0">
       <elements/>
     </filter>
-    <transportName>Channel Reader</transportName>
+    <transportName>JavaScript Reader</transportName>
     <mode>SOURCE</mode>
     <enabled>true</enabled>
     <waitForPrevious>true</waitForPrevious>
@@ -146,7 +174,15 @@
         <mapVariables/>
       </properties>
       <transformer version="4.3.0">
-        <elements/>
+        <elements>
+          <com.mirth.connect.plugins.javascriptstep.JavaScriptStep version="4.3.0">
+            <sequenceNumber>0</sequenceNumber>
+            <enabled>true</enabled>
+            <script msync-fileref="destinationConnector-Destination 1-transformer-step-0.js"/>
+          </com.mirth.connect.plugins.javascriptstep.JavaScriptStep>
+        </elements>
+        <inboundTemplate encoding="base64"/>
+        <outboundTemplate encoding="base64"/>
         <inboundDataType>HL7V2</inboundDataType>
         <outboundDataType>HL7V2</outboundDataType>
         <inboundProperties class="com.mirth.connect.plugins.datatypes.hl7v2.HL7v2DataTypeProperties" version="4.3.0">
@@ -362,7 +398,7 @@
     <metadata>
       <enabled>true</enabled>
       <lastModified>
-        <time>1690485658142</time>
+        <time>1690485730033</time>
         <timezone>Asia/Muscat</timezone>
       </lastModified>
       <pruningSettings>
