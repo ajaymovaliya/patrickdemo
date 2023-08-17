@@ -9,9 +9,9 @@
   <contextSet>
     <delegate>
       <contextType>DESTINATION_DISPATCHER</contextType>
-      <contextType>SOURCE_RECEIVER</contextType>
       <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
       <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
+      <contextType>SOURCE_RECEIVER</contextType>
       <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
     </delegate>
   </contextSet>

@@ -3,7 +3,7 @@
   <nextMetaDataId>2</nextMetaDataId>
   <name>my local channel</name>
   <description/>
-  <revision>2</revision>
+  <revision>3</revision>
   <sourceConnector version="4.3.0">
     <metaDataId>0</metaDataId>
     <name>sourceConnector</name>
@@ -398,7 +398,7 @@
     <metadata>
       <enabled>true</enabled>
       <lastModified>
-        <time>1690485730033</time>
+        <time>1690485925626</time>
         <timezone>Asia/Muscat</timezone>
       </lastModified>
       <pruningSettings>
