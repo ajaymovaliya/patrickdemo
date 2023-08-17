@@ -3,7 +3,7 @@
   <nextMetaDataId>2</nextMetaDataId>
   <name>sample</name>
   <description/>
-  <revision>5</revision>
+  <revision>6</revision>
   <sourceConnector version="4.3.0">
     <metaDataId>0</metaDataId>
     <name>sourceConnector</name>
@@ -200,7 +200,7 @@
     <metadata>
       <enabled>false</enabled>
       <lastModified>
-        <time>1689715154888</time>
+        <time>1692299125507</time>
         <timezone>Asia/Muscat</timezone>
       </lastModified>
       <pruningSettings>
